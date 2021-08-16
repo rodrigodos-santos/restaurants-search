@@ -5,12 +5,13 @@ import Slider from "react-slick";
 
 import logo from '../../assets/logo.svg'
 import restaurante from '../../assets/restaurante-fake.png'
-import { Card } from '../../components'
+import { Card, RestaurantCard, Modal } from '../../components'
 
 import { Container, Search, Logo, Wrapper, Map, Carousel, CarouselTitle } from './styles'
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')
+    const [modalOpened, setModalOpened] = useState(true)
 
     const settings = {
         dots: false,
@@ -43,8 +44,10 @@ const Home = () => {
                         <Card photo={restaurante} title="Nome qualquer"/>
                     </Carousel>
                 </Search>
+                <RestaurantCard />
             </Container>
             <Map/>
+            <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}/>
         </Wrapper>
     )
 }
