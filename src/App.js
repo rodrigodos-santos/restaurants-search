@@ -1,9 +1,9 @@
-import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import { Reset } from 'styled-reset' 
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { Reset } from 'styled-reset';
 
-import theme from './theme'
-import Home from './pages/Home'
+import Home from './pages/Home';
+import theme from './theme';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Reset />
       <Home />
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;
